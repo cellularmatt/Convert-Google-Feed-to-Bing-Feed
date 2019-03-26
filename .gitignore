@@ -1,2 +1,4 @@
 *.xml
 settings.py
+*.pyc
+__pycache__/
