@@ -14,8 +14,9 @@ minute = now.minute
 second = now.second
 micsec = now.microsecond
 
+print('#'*20)
 print('Started script on: '+ str(month) + '/'+ str(day) + '/'+ str(year) + ' '+ str(hour) + ':'+ str(minute) + ':'+ str(second) + ':' + str(micsec) )
-
+print('#'*20)
 start = time.time()
 
 get.get_xml()
@@ -25,3 +26,4 @@ upload.upload_xml()
 
 end = time.time()
 print('Script took ' + str(end - start) + ' seconds to run!\n\n')
+print('#'*20)
