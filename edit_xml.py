@@ -10,6 +10,9 @@ def edit_xml():
     atomRegex = re.compile('^<atom.*>')
     gRegex = re.compile('g:')
     endRegex = re.compile('<\/rss>')
+    htmlRegex = re.compile('<[^>]+>')
+
+
 
 
     xml = open('google_base.xml_products_cpc.xml', 'r')
@@ -29,6 +32,9 @@ def edit_xml():
         elif bool(atomRegex.match(line)):
             print('skipped ' + line)
             continue
+        #elif line[2:15] == "<description>":
+        #    line = "  <description>" + re.sub(htmlRegex, '', line).rstrip() + "</description>\n"
+        #    f.write(line)
         elif line == '</channel></rss>':
             f.write('</channel>')
         else:

@@ -5,7 +5,7 @@ import re
 
 def convert_xml():
     urlRegex = re.compile('\?utm[^.]*#googlebase')
-
+    print('\n\nOpening file...')
     tree = ET.parse('edited.xml')
     root = tree.getroot()
 
@@ -23,6 +23,7 @@ def convert_xml():
     label_2_missing = 0
     label_3_missing = 0
 
+    print('\n\nStarting Conversion...')
     for item in root.findall('item'):
         data = []
         
@@ -49,7 +50,8 @@ def convert_xml():
 
         data.append(item.find('id').text)
         data.append(item.find('title').text)
-        data.append(html.escape(item.find('description').text))
+        # data.append(html.escape(item.find('description').text))
+        data.append(item.find('description').text)
         data.append(item.find('google_product_category').text)
         data.append(item.find('product_type').text)
         data.append(re.sub(urlRegex, '', item.find('link').text))
