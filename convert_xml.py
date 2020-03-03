@@ -50,13 +50,8 @@ def convert_xml():
 
         data.append(item.find('id').text)
         data.append(item.find('title').text)
-<<<<<<< HEAD
         data.append(html.escape(item.find('description').text))
-        #data.append(item.find('description').text)
-=======
-        # data.append(html.escape(item.find('description').text))
-        data.append(item.find('description').text)
->>>>>>> 5537baf2e7c22aa562f1d57293d35c12455f4788
+        # data.append(item.find('description').text)
         data.append(item.find('google_product_category').text)
         data.append(item.find('product_type').text)
         data.append(re.sub(urlRegex, '', item.find('link').text))
