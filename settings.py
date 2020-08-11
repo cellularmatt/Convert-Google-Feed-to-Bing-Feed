@@ -1,5 +1,5 @@
 # ENTER URL TO DOWNLOAD FROM
-GOOGLE_FILE = 'https://www.cellularcountry.com/feed/google_base.xml_products_cpc.xml'
+GOOGLE_FILE = ''
 
 # ENTER THE BING IP ADDRESS TO UPLOAD TO
 BING_IP_ADDRESS = ''
